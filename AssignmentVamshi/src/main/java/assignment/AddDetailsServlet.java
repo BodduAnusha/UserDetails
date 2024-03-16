@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -42,6 +43,7 @@ public class AddDetailsServlet extends HttpServlet{
         int k=new AddDetailsDAO().insert(ub);
         if(k>0) {
         	pw.println("Details added");
+        	
         }
 		}
 		catch(Exception e){
